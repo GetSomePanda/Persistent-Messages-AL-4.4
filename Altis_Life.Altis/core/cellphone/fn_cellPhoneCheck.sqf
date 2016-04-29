@@ -6,6 +6,13 @@
 */
 if(life_session_completed) exitWith {};
 
-[player] remoteExecCall ["DB_fnc_cellPhoneRequest",2];
+if(life_HC_isActive) then 
+{
+	[player] remoteExecCall ["HC_fnc_cellPhoneRequest",HC_Life];
+} 
+else 
+{
+	[player] remoteExecCall ["DB_fnc_cellPhoneRequest",2];
+};
 
 

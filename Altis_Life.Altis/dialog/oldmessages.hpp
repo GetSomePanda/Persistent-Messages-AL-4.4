@@ -85,6 +85,17 @@ class Life_cell_old_msgs {
 			text = "Delete";
 			colorBackground[] = {0.7, 0, 0, 0.7};
 			onButtonClick = "[] spawn life_fnc_deleteMessage";
+			x = 0.300;
+			y = 0.76;
+			w = 0.15625;
+			h = 0.04;
+		};
+		
+		class ReplyButton: Life_RscButtonMenu {
+			idc = 98115;
+			text = "Reply";
+			colorBackground[] = {0.9,0.5,0.1,1};
+			onButtonClick = "[] spawn life_fnc_replyMessage";
 			x = 0.125;
 			y = 0.76;
 			w = 0.15625;

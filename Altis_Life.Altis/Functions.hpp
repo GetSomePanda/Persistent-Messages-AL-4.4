@@ -8,5 +8,6 @@ class Life_Client_Core {
 		class messagesMenu {};
 		class lbChanged {};
 		class deleteMessage {};
+		class replyMessage {};
 	};
 };

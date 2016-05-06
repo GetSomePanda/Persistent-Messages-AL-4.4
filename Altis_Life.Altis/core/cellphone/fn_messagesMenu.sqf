@@ -4,7 +4,7 @@
 	File Name: fn_messagesMenu.sqf
 	Information: Sets up message menu.
 */
-private["_messages","_playerList","_infoToPass","_delButton"];
+private["_messages","_playerList","_infoToPass","_delButton","_replyButton"];
 
 disableSerialization;
 
@@ -13,6 +13,8 @@ waitUntil {!isNull (findDisplay 98111)};
 _playerList = ((findDisplay 98111) displayCtrl 98112);
 _delButton = ((findDisplay 98111) displayCtrl 98114);
 _delButton ctrlShow false;
+_replyButton = ((findDisplay 98111) displayCtrl 98115);
+_replyButton ctrlShow false;
 
 _messages = player getVariable "cellphone_messages";
 

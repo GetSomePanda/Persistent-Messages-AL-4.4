@@ -3,6 +3,9 @@
 	Add this to the end of the file.
 	- Panda
 */
+
+_messages = player getVariable "cellphone_messages";
+
 if(life_HC_isActive) then 
 {
 	[getPlayerUid player, _messages] remoteExecCall ["HC_fnc_saveCellPhone",HC_Life];

@@ -28,66 +28,6 @@ else
 	_day = _timeArray select 2;
 	_hour = _timeArray select 3;
 	_minutes = _timeArray select 4;
-	
-	if(_hour < 10) then
-	{
-		_hour = format["0%1",_hour];
-	};
-	
-	if(_hour isEqualTo 10) then
-	{
-		_hour = format["%1" + "0",_hour];
-	};
-		
-	if(_hour isEqualTo 20) then
-	{
-		_hour = format["%1" + "0",_hour];
-	};
-		
-	if(_hour isEqualTo 30) then
-	{
-		_hour = format["%1" + "0",_hour];
-	};
-		
-	if(_hour isEqualTo 40) then
-	{
-		_hour = format["%1" + "0",_hour];
-	};
-		
-	if(_hour isEqualTo 50) then
-	{
-		_hour = format["%1" + "0",_hour];
-	};
-		
-	if(_minutes < 10) then
-	{
-		_minutes = format["0%1",_minutes];
-	};
-		
-	if(_minutes isEqualTo 10) then
-	{
-		_minutes = format["%1" + "0",_minutes];
-	};
-		
-	if(_minutes isEqualTo 20) then
-	{
-		_minutes = format["%1" + "0",_minutes];
-	};
-		
-	if(_minutes isEqualTo 30) then
-	{
-		_minutes = format["%1" + "0",_minutes];
-	};
-		
-	if(_minutes isEqualTo 40) then
-	{
-		_minutes = format["%1" + "0",_minutes];
-	};
-		
-	if(_minutes isEqualTo 50) then
-	{
-		_minutes = format["%1" + "0",_minutes];
-	};
 
 	_text ctrlSetText format ["""%1"" - %2 \n \nMessage received at %6:%7 on %3/%4/%5 . ", _message, _nameOnPList, _day, _month, _year, _hour, _minutes];
 	_delButton ctrlShow true;

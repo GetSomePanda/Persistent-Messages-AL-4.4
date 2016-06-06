@@ -20,6 +20,7 @@ if(typeName _queryResult == "STRING") exitWith
 	_queryResult set[2,_cleanMsgs];
 	[_queryResult] remoteExecCall ["life_fnc_setupCellPhone",(owner _player)];
 };
+
 if(count _queryResult != 0) exitWith 
 {
 	_cleanMsgs = [(_queryResult select 2)] call DB_fnc_mresToArray;

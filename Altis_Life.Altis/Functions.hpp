@@ -1,3 +1,9 @@
+/*
+
+	Put the class CellPhone under your existing Life_Client_Core in this file in your Altis_Life.Altis.
+
+*/
+
 class Life_Client_Core {
 	tag = "life";
 	

@@ -1,3 +1,8 @@
+/*
+	Push these variables to the list thats already there, make sure not to overwrite just add them to it.
+
+*/
+
 class SpyGlass {
 
     LIFE_Functions[] = {"life_fnc_messagesMenu","life_fnc_deleteMessage","life_fnc_lbChanged","life_fnc_cellphonecheck","life_fnc_setupcellphone"};   

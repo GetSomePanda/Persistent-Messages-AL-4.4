@@ -159,7 +159,7 @@ class Life_cell_phone {
 		
 		class MessagesButtonKey: Life_RscButtonMenu {
 			idc = -1;
-			text = "My Messages";
+			text = "Messages";
 			onButtonClick = "[] spawn life_fnc_messagesMenu";
 			x = 0.1;
 			y = 0.64;

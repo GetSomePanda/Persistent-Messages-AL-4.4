@@ -4,4 +4,5 @@
 
 F(DB_fnc_cellPhoneRequest,SERVER)
 F(DB_fnc_saveCellPhone,SERVER)	
+F(DB_fnc_getRealTime,SERVER)
 F(life_fnc_setupCellPhone,CLIENT)

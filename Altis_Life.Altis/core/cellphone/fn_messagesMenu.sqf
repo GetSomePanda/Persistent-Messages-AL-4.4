@@ -1,5 +1,6 @@
 /*
 	Author: GetSomePanda / Panda
+	Helped: BoGuu
 	SteamID: 76561198145366418
 	File Name: fn_messagesMenu.sqf
 	Information: Sets up message menu.
@@ -35,6 +36,17 @@ else
 		_day = _timeArray select 2;
 		_hour = _timeArray select 3;
 		_minutes = _timeArray select 4;
+		
+		_minutes = toArray(str _minutes);
+		if (count _minutes isEqualTo 1) then 
+		{
+			_minutes = [48,(_minutes select 0)];
+			_minutes = toString(_minutes);
+		} 
+		else 
+		{
+			_minutes = toString(_minutes);
+		};
 		
 		_infoToPass = format["%1", _x];
 		_playerList lbAdd format["%1 - %2:%3 %4/%5/%6", _x select 0, _hour, _minutes, _day, _month, _year];

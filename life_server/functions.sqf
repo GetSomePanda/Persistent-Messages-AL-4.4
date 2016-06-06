@@ -249,7 +249,7 @@ compileFinal "
 	{
 		case 0 :
 		{
-			private[""_message"",""_messages"",""_newMessage"",""_newArray""];
+			private[""_message"",""_messages"",""_newMessage"",""_newArray"",""_time""];
 			_message = format["">>>MESSAGE FROM %1: %2"",_from,_msg];
 			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>New Message<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>You<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg];
 
@@ -257,7 +257,9 @@ compileFinal "
 			systemChat _message;
 			
 			_messages = player getVariable ""cellphone_messages"";
-			_newArray = [[_from,_msg]];
+			[] call DB_fnc_getRealTime;
+			_time = missionNameSpace getVariable ""RealTime"";
+			_newArray = [[_from,_msg,_time]];
 			
 			{
 				_newArray pushback _x;
@@ -296,7 +298,7 @@ compileFinal "
 
 		case 3 :
 		{
-			private[""_message"",""_messages"",""_newMessage"",""_newArray""];
+			private[""_message"",""_messages"",""_newMessage"",""_newArray"",""_time""];
 			_message = format[""!!! ADMIN MESSAGE: %1"",_msg];
 			_admin = format[""Sent by admin: %1"", _from];
 			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Message<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>You<br/><t color='#33CC33'>From: <t color='#ffffff'>An Admin<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%1"",_msg];
@@ -306,7 +308,9 @@ compileFinal "
 			if((call life_adminlevel) > 0) then {systemChat _admin;};
 			
 			_messages = player getVariable ""cellphone_messages"";
-			_newArray = [[_from,_msg]];
+			[] call DB_fnc_getRealTime;
+			_time = missionNameSpace getVariable ""RealTime"";
+			_newArray = [[_from,_msg,_time]];
 			
 			{
 				_newArray pushback _x;
@@ -317,7 +321,7 @@ compileFinal "
 
 		case 4 :
 		{
-			private[""_message"",""_admin"",""_messages"",""_newMessage"",""_newArray""];
+			private[""_message"",""_admin"",""_messages"",""_newMessage"",""_newArray"",""_time""];
 			_message = format[""!!!ADMIN MESSAGE: %1"",_msg];
 			_admin = format[""Sent by admin: %1"", _from];
 			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Message<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>All Players<br/><t color='#33CC33'>From: <t color='#ffffff'>The Admins<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%1"",_msg];
@@ -326,7 +330,9 @@ compileFinal "
 			systemChat _message;
 			
 			_messages = player getVariable ""cellphone_messages"";
-			_newArray = [[_from,_msg]];
+			[] call DB_fnc_getRealTime;
+			_time = missionNameSpace getVariable ""RealTime"";
+			_newArray = [[_from,_msg,_time]];
 			
 			{
 				_newArray pushback _x;

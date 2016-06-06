@@ -19,6 +19,7 @@ class CfgFunctions
 			file = "\life_server\Functions\MySQL";
 			class cellPhoneRequest {};
 			class saveCellPhone {};
+			class getRealTime {};
 		};
 	};
 };

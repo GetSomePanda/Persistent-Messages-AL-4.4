@@ -4,7 +4,7 @@
 	File Name: fn_messagesMenu.sqf
 	Information: Sets up message menu.
 */
-private["_messages","_playerList","_infoToPass","_delButton","_replyButton"];
+private["_messages","_playerList","_infoToPass","_delButton","_replyButton","_time","_timeArray","_year","_month","_day","_hour","_minutes"];
 
 disableSerialization;
 
@@ -28,8 +28,16 @@ if(count _messages < 1) then
 else
 {
 	{
+		_time = _x select 2;
+		_timeArray = _time select 1;
+		_year = _timeArray select 0;
+		_month = _timeArray select 1;
+		_day = _timeArray select 2;
+		_hour = _timeArray select 3;
+		_minutes = _timeArray select 4;
+		
 		_infoToPass = format["%1", _x];
-		_playerList lbAdd format["%1", _x select 0];
+		_playerList lbAdd format["%1 - %2:%3 %4/%5/%7", _x select 0, _hour, _minutes, _day, _month, _year];
 		_playerList lbSetdata [(lbSize _playerList)-1, _infoToPass];
 	} foreach _messages;
 };

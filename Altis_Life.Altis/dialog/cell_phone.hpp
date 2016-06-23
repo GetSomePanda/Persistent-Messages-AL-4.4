@@ -9,28 +9,28 @@ class Life_cell_phone {
 		class Life_RscTitleBackground: Life_RscText {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
-			x = 0.1;
-			y = 0.16;
-			w = 0.64;
-			h = 0.04;
+			x = 0.335 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.33 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 
-		class MainBackground: Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
-			idc = -1;
-			x = 0.1025;
-			y = 0.204;
-			w = 0.6375;
-			h = 0.36;
-		};
+        class MainBackground: Life_RscText {
+            colorBackground[] = {0, 0, 0, 0.7};
+            idc = -1;
+			x = 0.335 * safezoneW + safezoneX;
+			y = 0.3592 * safezoneH + safezoneY;
+			w = 0.33 * safezoneW;
+			h = 0.2816 * safezoneH;
+        };
 		
 		class SendTo: Life_RscText {
 			idc = -1;
 			text = "Send To:";
-			x = 0.1;
-			y = 0.4;
-			w = 0.6;
-			h = 0.04;
+			x = 0.340156 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.314531 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 	};
 
@@ -41,60 +41,60 @@ class Life_cell_phone {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 3001;
 			text = "Mobile";
-			x = 0.1;
-			y = 0.16;
-			w = 0.6;
-			h = 0.04;
+			x = 0.335 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.33 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 
 		class TextToSend: Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 3002;
 			text = "$STR_CELL_TextToSend";
-			x = 0.1;
-			y = 0.2;
-			w = 0.6;
-			h = 0.04;
+			x = 0.340156 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.2475 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 
 		class textEdit: Life_RscEdit {
 			idc = 3003;
 			text = "";
 			sizeEx = 0.030;
-			x = 0.1125;
-			y = 0.26;
-			w = 0.6125;
-			h = 0.1;
+			x = 0.340156 * safezoneW + safezoneX;
+			y = 0.39 * safezoneH + safezoneY;
+			w = 0.314531 * safezoneW;
+			h = 0.077 * safezoneH;
 		};
 
 		class TextMsgButton: Life_RscButtonMenu {
 			idc = 3015;
 			text = "Send Message";
 			onButtonClick = "[] call TON_fnc_cell_textmsg";
-			x = 0.1;
-			y = 0.58;
-			w = 0.2;
-			h = 0.04;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0.9,0.5,0.1,1};
 		};
 
 		class PlayerList: Life_RscCombo {
 			idc = 3004;
-			x = 0.1125;
-			y = 0.46;
-			w = 0.6125;
-			h = 0.08;
+			x = 0.340156 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.314531 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
 		class TextCopButton: Life_RscButtonMenu {
 			idc = 3016;
 			text = "Police";
 			onButtonClick = "[] call TON_fnc_cell_textcop";
-			x = 0.325;
-			y = 0.58;
-			w = 0.2;
-			h = 0.04;
+			x = 0.422656 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0.5,1};
 		};
@@ -103,10 +103,10 @@ class Life_cell_phone {
 			idc = 3017;
 			text = "$STR_CELL_TextAdmins";
 			onButtonClick = "[] call TON_fnc_cell_textadmin";
-			x = 0.325;
-			y = 0.7;
-			w = 0.2;
-			h = 0.04;
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0.5,0,0,0.7};
 		};
@@ -115,10 +115,10 @@ class Life_cell_phone {
 			idc = 3020;
 			text = "$STR_CELL_AdminMsg";
 			onButtonClick = "[] call TON_fnc_cell_adminmsg";
-			x = 0.5375;
-			y = 0.64;
-			w = 0.2;
-			h = 0.04;
+			x = 0.5825 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0.5,0,0,0.7};
 		};
@@ -126,11 +126,10 @@ class Life_cell_phone {
 		class AdminMsgAllButton: Life_RscButtonMenu {
 			idc = 3021;
 			text = "$STR_CELL_AdminMSGAll";
-			onButtonClick = "[] call TON_fnc_cell_adminmsgall";
-			x = 0.5375;
-			y = 0.58;
-			w = 0.2;
-			h = 0.04;
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.599 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0.5,0,0,0.7};
 		};
@@ -139,10 +138,10 @@ class Life_cell_phone {
 			idc = 3022;
 			text = "EMS";
 			onButtonClick = "[] call TON_fnc_cell_emsrequest";
-			x = 0.325;
-			y = 0.64;
-			w = 0.2;
-			h = 0.04;
+			x = 0.422656 * safezoneW + safezoneX;
+			y = 0.599 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0.5,0,0.7};
 		};
@@ -151,20 +150,20 @@ class Life_cell_phone {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			x = 0.5875;
-			y = 0.76;
-			w = 0.15;
-			h = 0.04;
+			x = 0.5825 * safezoneW + safezoneX;
+			y = 0.599 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
 		class MessagesButtonKey: Life_RscButtonMenu {
 			idc = -1;
 			text = "Messages";
 			onButtonClick = "[] spawn life_fnc_messagesMenu";
-			x = 0.1;
-			y = 0.64;
-			w = 0.2;
-			h = 0.04;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.599 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0.9,0.5,0.1,1};
 		};

@@ -10,39 +10,39 @@ class Life_cell_old_msgs {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			text = "Messages";
-			x = 0.125;
-			y = 0.13;
-			w = 0.7625;
-			h = 0.04;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.2965 * safezoneH + safezoneY;
+			w = 0.314531 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 
 		class MainBackground: Life_RscText {
 			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
-			x = 0.125;
-			y = 0.18;
-			w = 0.7625;
-			h = 0.56;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.324 * safezoneH + safezoneY;
+			w = 0.314531 * safezoneW;
+			h = 0.308 * safezoneH;
 		};
 		
 		class FromBar: Life_RscText {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			text = "From";
-			x = 0.1375;
-			y = 0.2;
-			w = 0.2375;
-			h = 0.04;
+			x = 0.350469 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.0979687 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
 		class MessageBar: Life_RscText {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			text = "Message";
-			x = 0.4125;
-			y = 0.2;
-			w = 0.45;
-			h = 0.04;
+			x = 0.463906 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.185625 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 	};
 
@@ -51,10 +51,10 @@ class Life_cell_old_msgs {
 		class TextBox: Life_RscStructuredText {
 			idc = 98113;
 			text = "";
-			x = 0.4125;
-			y = 0.26;
-			w = 0.45;
-			h = 0.46;
+			x = 0.463906 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.185625 * safezoneW;
+			h = 0.253 * safezoneH;
 			colorBackground[] = {0,0,0,0.7};
 		};
 		
@@ -63,10 +63,10 @@ class Life_cell_old_msgs {
 			text = "";
 			sizeEx = 0.035;
 			onLBSelChanged = "[] call life_fnc_lbChanged";
-			x = 0.1375;
-			y = 0.26;
-			w = 0.2375;
-			h = 0.46;
+			x = 0.350469 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.0979687 * safezoneW;
+			h = 0.253 * safezoneH;
 			colorBackground[] = {0,0,0,0.7};
 		};
 		
@@ -74,10 +74,10 @@ class Life_cell_old_msgs {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			x = 0.725;
-			y = 0.76;
-			w = 0.15625;
-			h = 0.04;
+			x = 0.592812 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0644531 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
 		class DeleteButton: Life_RscButtonMenu {
@@ -85,10 +85,10 @@ class Life_cell_old_msgs {
 			text = "Delete";
 			colorBackground[] = {0.7, 0, 0, 0.7};
 			onButtonClick = "[] spawn life_fnc_deleteMessage";
-			x = 0.300;
-			y = 0.76;
-			w = 0.15625;
-			h = 0.04;
+			x = 0.4175 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0644531 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
 		class ReplyButton: Life_RscButtonMenu {
@@ -96,10 +96,10 @@ class Life_cell_old_msgs {
 			text = "Reply";
 			colorBackground[] = {0.9,0.5,0.1,1};
 			onButtonClick = "[] spawn life_fnc_replyMessage";
-			x = 0.125;
-			y = 0.76;
-			w = 0.15625;
-			h = 0.04;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.0644531 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 	};
 };

@@ -6,4 +6,11 @@
 
 _messages = player getVariable "cellphone_messages";
 
-[getPlayerUid player, _messages] remoteExecCall ["DB_fnc_saveCellPhone",2];
+if (life_HC_isActive) then 
+{
+    [getPlayerUid player, _messages] remoteExecCall ["HC_fnc_saveCellPhone",HC_Life];
+} 
+else 
+{
+    [getPlayerUid player, _messages] remoteExecCall ["DB_fnc_saveCellPhone",2];
+};

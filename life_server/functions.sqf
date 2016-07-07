@@ -1,7 +1,7 @@
 #include "script_macros.hpp"
 /*
 	File: functions.sqf
-	Author:
+	Author: Bryan "Tonic" Boardwine
 
 	Description:
 
